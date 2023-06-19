@@ -15,9 +15,18 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
-    testImplementation 'com.codeborne:selenide:6.12.2'
-    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testAnnotationProcessor "org.projectlombok:lombok:1.18.20"
+    testImplementation(
+            "org.junit.jupiter:junit-jupiter-api:5.9.2",
+            'org.junit.jupiter:junit-jupiter-params:5.9.2',
+            "org.assertj:assertj-core:3.9.1",
+            "org.projectlombok:lombok:1.18.20",
+            "com.codeborne:selenide:6.13.0",
+            "com.fasterxml.jackson.core:jackson-databind:2.14.2",
+            "com.fasterxml.jackson.core:jackson-core:2.14.2",
+            'com.github.javafaker:javafaker:1.0.2'
+    )
 }
 
 test {
