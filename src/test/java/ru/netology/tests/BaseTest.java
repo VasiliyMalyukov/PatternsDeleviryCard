@@ -10,7 +10,7 @@ public abstract class BaseTest {
 
     @BeforeAll
     public static void setup() {
-        Configuration.baseUrl = "http://localhost:9999";
+        Configuration.baseUrl = "http://localhost:7777";
         Configuration.headless = Boolean.parseBoolean(System.getProperty("selenide.headless"));
     }
 
